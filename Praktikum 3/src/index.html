@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Penjualan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-5">
+    <div class="max-w-3xl mx-auto">
+      <!-- Form Penjualan -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold text-center mb-4">Form Penjualan</h2>
+        <form>
+          <div class="mb-3">
+            <label class="block font-semibold">Produk</label>
+            <input
+              type="text"
+              class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-purple-500"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="block font-semibold">Jumlah</label>
+            <input
+              type="number"
+              class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-purple-500"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="block font-semibold">Harga</label>
+            <input
+              type="text"
+              class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-purple-500"
+            />
+          </div>
+          <button
+            class="w-full bg-purple-700 text-white py-2 rounded hover:bg-gray-400 font-semibold"
+          >
+            Tambahkan
+          </button>
+        </form>
+      </div>
+
+      <!-- Tabel Penjualan -->
+      <div class="bg-white p-6 rounded-lg shadow-md mt-6">
+        <h2 class="text-xl font-bold text-center mb-4">
+          Data Penjualan Bulanan
+        </h2>
+        <table
+          class="w-full border-collapse border border-purple-300 text-center"
+        >
+          <thead class="bg-purple-700 text-white">
+            <tr>
+              <th rowspan="2" class="border border-purple-300 p-2">No</th>
+              <th rowspan="2" class="border border-purple-300 p-2">Produk</th>
+              <th colspan="2" class="border border-purple-300 p-2">
+                Penjualan
+              </th>
+            </tr>
+            <tr>
+              <th class="border border-purple-300 p-2">Jumlah</th>
+              <th class="border border-purple-300 p-2">Harga Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-purple-300 p-2">1</td>
+              <td class="border border-purple-300 p-2">Sepatu</td>
+              <td class="border border-purple-300 p-2">50</td>
+              <td class="border border-purple-300 p-2">Rp 25.000.000</td>
+            </tr>
+            <tr>
+              <td class="border border-purple-300 p-2">2</td>
+              <td class="border border-purple-300 p-2">Tas</td>
+              <td class="border border-purple-300 p-2">30</td>
+              <td class="border border-purple-300 p-2">Rp 15.000.000</td>
+            </tr>
+            <tr>
+              <td class="border border-purple-300 p-2">3</td>
+              <td class="border border-purple-300 p-2">Jam Tangan</td>
+              <td class="border border-purple-300 p-2">20</td>
+              <td class="border border-purple-300 p-2">Rp 10.000.000</td>
+            </tr>
+          </tbody>
+          <tfoot class="bg-gray-200 font-semibold">
+            <tr>
+              <td colspan="2" class="border border-purple-300 p-2">
+                Total Penjualan
+              </td>
+              <td class="border border-purple-300 p-2">100</td>
+              <td class="border border-purple-300 p-2">Rp 50.000.000</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
