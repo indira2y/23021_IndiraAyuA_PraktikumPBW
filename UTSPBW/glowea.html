@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glowéa Beauty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+      }
+      .carousel > div {
+        scroll-snap-align: center;
+        flex: none;
+        width: 100%;
+      }
+      .testimonial-slider {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .testimonial-card {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 0 15px;
+      }
+      @media (min-width: 768px) {
+        .testimonial-card {
+          min-width: 50%;
+        }
+      }
+      @media (min-width: 1024px) {
+        .testimonial-card {
+          min-width: 33.33%;
+        }
+      }
+    </style>
+  </head>
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-bold text-pink-600">Glowéa</h1>
+      <div class="flex items-center space-x-4">
+        <nav class="hidden md:flex space-x-6 text-gray-800">
+          <a href="#about" class="hover:text-pink-600">About Us</a>
+          <a href="#products" class="hover:text-pink-600">Our Products</a>
+          <a href="#new-products" class="hover:text-pink-600">New Arrivals</a>
+          <a href="#sellers" class="hover:text-pink-600">Our Sellers</a>
+          <a href="#media" class="hover:text-pink-600">Media</a>
+          <a href="#contact" class="hover:text-pink-600">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Carousel -->
+  <section class="bg-pink-50 py-12 overflow-hidden">
+    <div
+      class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-6"
+    >
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-4xl font-bold text-gray-800 leading-tight mb-4">
+          New Variant
+          <span class="text-pink-600">Facial Wash</span>
+        </h2>
+        <p class="text-lg text-gray-700 mb-6">
+          Deep Clean Dari Dalam, Glowing Dari Luar
+        </p>
+        <a
+          href="#products"
+          class="bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition"
+        >
+          Find Out More
+        </a>
+      </div>
+      <div class="md:w-1/2 text-center">
+        <img
+          src="image/newfw.jpg"
+          alt="New Facial Wash"
+          class="w-64 h-auto rounded-xl shadow-md"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-16 bg-white text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-gray-800 mb-6">About Us</h3>
+      <p class="text-gray-600 mb-4">
+        Glowéa adalah brand kecantikan yang berkomitmen menghadirkan produk dari
+        bahan alami, halal, dan aman. Kami percaya bahwa setiap perempuan berhak
+        tampil percaya diri dengan kulit yang sehat, terawat, dan glowing alami.
+        Lebih dari sekadar produk, Glowéa hadir sebagai sahabat di perjalanan
+        self-love kamu. Karena, kami percaya bahwa beauty starts with being real
+        🌟
+      </p>
+    </div>
+  </section>
+
+  <!-- Best Seller Products -->
+  <section id="products" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">
+        Best Seller Products
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center shadow p-6 rounded-lg bg-white">
+          <img src="image/daycream.jpg" alt="Day Cream" class="mx-auto mb-4" />
+          <h5 class="text-sm text-gray-500">Day Cream</h5>
+          <h4 class="font-semibold text-lg text-gray-800 mb-2">
+            Whitening Day Cream
+          </h4>
+          <a
+            href="#contact"
+            class="text-pink-600 font-semibold hover:underline"
+          >
+            See more - Rp. 85.000
+          </a>
+        </div>
+        <div class="text-center shadow p-6 rounded-lg bg-white">
+          <img
+            src="image/facialwash.jpg"
+            alt="Facial Wash"
+            class="mx-auto mb-4"
+          />
+          <h5 class="text-sm text-gray-500">Facial Wash</h5>
+          <h4 class="font-semibold text-lg text-gray-800 mb-2">Facial Wash</h4>
+          <a
+            href="#contact"
+            class="text-pink-600 font-semibold hover:underline"
+          >
+            See more - Rp. 60.000
+          </a>
+        </div>
+        <div class="text-center shadow p-6 rounded-lg bg-white">
+          <img
+            src="image/nightcream.jpg"
+            alt="Night Cream"
+            class="mx-auto mb-4"
+          />
+          <h5 class="text-sm text-gray-500">Night Cream</h5>
+          <h4 class="font-semibold text-lg text-gray-800 mb-2">
+            Whitening Night Cream
+          </h4>
+          <a
+            href="#contact"
+            class="text-pink-600 font-semibold hover:underline"
+          >
+            See more - Rp. 85.000
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrival Banner -->
+  <section id="new-products" class="py-16 bg-pink-100 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-gray-800 mb-4">✨ New Arrival ✨</h3>
+      <p class="text-gray-700 mb-6">
+        Coba produk terbaru Glowéa yang baru saja diluncurkan bulan ini! Limited
+        stock tersedia hanya di beberapa reseller resmi.
+      </p>
+      <a
+        href="#new-skincare"
+        class="inline-block bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition"
+      >
+        Lihat Produk Terbaru
+      </a>
+    </div>
+  </section>
+
+  <!-- New Skincare Products -->
+  <section id="new-skincare" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">
+        New Skincare Collection
+      </h3>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+        <!-- Product 1 -->
+        <div
+          class="text-center shadow p-4 rounded-lg bg-white hover:shadow-lg transition"
+        >
+          <img src="image/serum.jpg" alt="Glow Serum" class="mx-auto mb-3" />
+          <h5 class="text-sm text-gray-500">Serum</h5>
+          <h4 class="font-semibold text-gray-800 mb-1">Glow Serum</h4>
+          <p class="text-pink-600 font-semibold text-sm">Rp. 120.000</p>
+        </div>
+
+        <!-- Product 2 -->
+        <div
+          class="text-center shadow p-4 rounded-lg bg-white hover:shadow-lg transition"
+        >
+          <img src="image/clay.jpg" alt="Clay Mask" class="mx-auto mb-3" />
+          <h5 class="text-sm text-gray-500">Mask</h5>
+          <h4 class="font-semibold text-gray-800 mb-1">Detox Clay Mask</h4>
+          <p class="text-pink-600 font-semibold text-sm">Rp. 95.000</p>
+        </div>
+
+        <!-- Product 3 -->
+        <div
+          class="text-center shadow p-4 rounded-lg bg-white hover:shadow-lg transition"
+        >
+          <img src="image/eyecream.jpg" alt="Eye Cream" class="mx-auto mb-3" />
+          <h5 class="text-sm text-gray-500">Eye Care</h5>
+          <h4 class="font-semibold text-gray-800 mb-1">Bright Eye Cream</h4>
+          <p class="text-pink-600 font-semibold text-sm">Rp. 110.000</p>
+        </div>
+
+        <!-- Product 4 -->
+        <div
+          class="text-center shadow p-4 rounded-lg bg-white hover:shadow-lg transition"
+        >
+          <img src="image/toner.jpg" alt="Toner" class="mx-auto mb-3" />
+          <h5 class="text-sm text-gray-500">Toner</h5>
+          <h4 class="font-semibold text-gray-800 mb-1">Hydrating Toner</h4>
+          <p class="text-pink-600 font-semibold text-sm">Rp. 75.000</p>
+        </div>
+
+        <!-- Product 5 -->
+        <div
+          class="text-center shadow p-4 rounded-lg bg-white hover:shadow-lg transition"
+        >
+          <img src="image/sunscreen.jpg" alt="Sunscreen" class="mx-auto mb-3" />
+          <h5 class="text-sm text-gray-500">Sunscreen</h5>
+          <h4 class="font-semibold text-gray-800 mb-1">UV Protection SPF 50</h4>
+          <p class="text-pink-600 font-semibold text-sm">Rp. 90.000</p>
+        </div>
+
+        <!-- Product 6 -->
+        <div
+          class="text-center shadow p-4 rounded-lg bg-white hover:shadow-lg transition"
+        >
+          <img
+            src="image/cleansingoil.jpg"
+            alt="Cleansing Oil"
+            class="mx-auto mb-3"
+          />
+          <h5 class="text-sm text-gray-500">Cleanser</h5>
+          <h4 class="font-semibold text-gray-800 mb-1">Cleansing Oil</h4>
+          <p class="text-pink-600 font-semibold text-sm">Rp. 85.000</p>
+        </div>
+
+        <!-- Product 7 -->
+        <div
+          class="text-center shadow p-4 rounded-lg bg-white hover:shadow-lg transition"
+        >
+          <img
+            src="image/sleepingmask.jpg"
+            alt="Sleeping Mask"
+            class="mx-auto mb-3"
+          />
+          <h5 class="text-sm text-gray-500">Mask</h5>
+          <h4 class="font-semibold text-gray-800 mb-1">Overnight Mask</h4>
+          <p class="text-pink-600 font-semibold text-sm">Rp. 100.000</p>
+        </div>
+
+        <!-- Product 8 -->
+        <div
+          class="text-center shadow p-4 rounded-lg bg-white hover:shadow-lg transition"
+        >
+          <img src="image/lipbalm.jpg" alt="Lip Balm" class="mx-auto mb-3" />
+          <h5 class="text-sm text-gray-500">Lip Balm</h5>
+          <h4 class="font-semibold text-gray-800 mb-1">Hydrating Balm</h4>
+          <p class="text-pink-600 font-semibold text-sm">Rp. 35.000</p>
+        </div>
+
+        <!-- Product 9 -->
+        <div
+          class="text-center shadow p-4 rounded-lg bg-white hover:shadow-lg transition"
+        >
+          <img src="image/peeling.jpg" alt="Peeling" class="mx-auto mb-3" />
+          <h5 class="text-sm text-gray-500">Exfoliator</h5>
+          <h4 class="font-semibold text-gray-800 mb-1">Gentle Peeling Serum</h4>
+          <p class="text-pink-600 font-semibold text-sm">Rp. 180.000</p>
+        </div>
+
+        <!-- Product 10 -->
+        <div
+          class="text-center shadow p-4 rounded-lg bg-white hover:shadow-lg transition"
+        >
+          <img src="image/facemist.jpg" alt="Mist" class="mx-auto mb-3" />
+          <h5 class="text-sm text-gray-500">Mist</h5>
+          <h4 class="font-semibold text-gray-800 mb-1">Refresh Face Mist</h4>
+          <p class="text-pink-600 font-semibold text-sm">Rp. 165.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Sellers Section -->
+  <section id="sellers" class="py-16 bg-white text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-6 text-gray-800">Our Store</h3>
+      <p class="text-gray-600 mb-6">
+        Temukan store Glowéa di seluruh Indonesia.
+      </p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126916.0874578941!2d106.68942932929262!3d-6.229728018098804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3fdf4725f3f%3A0x3f921ca8be2a21e4!2sJakarta!5e0!3m2!1sen!2sid!4v1716870000000!5m2!1sen!2sid"
+        width="100%"
+        height="300"
+        style="border: 0; border-radius: 10px"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="shadow-lg"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Media Section -->
+  <section id="media" class="py-16 bg-gray-50 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-6 text-gray-800">Let's Watch</h3>
+      <p class="text-gray-600 mb-6">What Hailey Bieber Said :</p>
+      <div class="mx-auto w-full max-w-[720px] aspect-video">
+        <iframe
+          class="w-full h-full rounded-lg shadow-lg"
+          src="https://www.youtube.com/embed/O_qgaOUR3Fo"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">
+        What Our Customers Say
+      </h3>
+
+      <div class="relative overflow-hidden">
+        <div class="testimonial-slider flex" id="testimonialSlider">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="bg-pink-50 p-6 rounded-lg shadow h-full">
+              <div class="flex items-center mb-4">
+                <div class="text-pink-500 text-2xl mr-2">★★★★★</div>
+              </div>
+              <p class="text-gray-700 italic mb-4">
+                "Produk Glowéa ini emang ajaib bikin muka jadi cerah! Suka
+                banget sama facial washnya. Texture-nya lembut dan ga bikin
+                kulit kering."
+              </p>
+              <div class="flex items-center">
+                <img
+                  src="image/syifa.jpg"
+                  alt="Customer"
+                  class="w-10 h-10 rounded-full mr-3"
+                />
+                <div>
+                  <div class="font-semibold text-pink-600">Syifa Hadju</div>
+                  <div class="text-sm text-gray-500">@syifahadju</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="bg-pink-50 p-6 rounded-lg shadow h-full">
+              <div class="flex items-center mb-4">
+                <div class="text-pink-500 text-2xl mr-2">★★★★☆</div>
+              </div>
+              <p class="text-gray-700 italic mb-4">
+                "No komen sih sama semua produk dari glowea ini semuanya aku
+                suka dan works di kulit badak aku! pokonya bakal aku repurchase
+                terus terusan toppp."
+              </p>
+              <div class="flex items-center">
+                <img
+                  src="image/shasa.jpg"
+                  alt="Customer"
+                  class="w-10 h-10 rounded-full mr-3"
+                />
+                <div>
+                  <div class="font-semibold text-pink-600">Shasa Zania</div>
+                  <div class="text-sm text-gray-500">@shasazaniaa</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="bg-pink-50 p-6 rounded-lg shadow h-full">
+              <div class="flex items-center mb-4">
+                <div class="text-pink-500 text-2xl mr-2">★★★★★</div>
+              </div>
+              <p class="text-gray-700 italic mb-4">
+                "Setelah pakai night cream Glowéa, kulitku makin glowing dan
+                KINCLONG di pagi hari. Aromanya juga aku sukakkk, bikin tidur
+                lebih nyenyak. makasih yaa glowea"
+              </p>
+              <div class="flex items-center">
+                <img
+                  src="image/davina.jpg"
+                  alt="Customer"
+                  class="w-10 h-10 rounded-full mr-3"
+                />
+                <div>
+                  <div class="font-semibold text-pink-600">Davina Karamoy</div>
+                  <div class="text-sm text-gray-500">@davinaakaramoy</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="bg-pink-50 p-6 rounded-lg shadow h-full">
+              <div class="flex items-center mb-4">
+                <div class="text-pink-500 text-2xl mr-2">★★★★★</div>
+              </div>
+              <p class="text-gray-700 italic mb-4">
+                "Glowéa kata aku banyakin lagi sih produknya Flek hitam mamaku
+                memudar dan waktuku pake kulit jadi lebih cerah dalam 2 minggu
+                pemakaian. Worth the price!"
+              </p>
+              <div class="flex items-center">
+                <img
+                  src="image/ariel.jpg"
+                  alt="Customer"
+                  class="w-10 h-10 rounded-full mr-3"
+                />
+                <div>
+                  <div class="font-semibold text-pink-600">Ariel Tatum</div>
+                  <div class="text-sm text-gray-500">@arieltatum</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <div class="bg-pink-50 p-6 rounded-lg shadow h-full">
+              <div class="flex items-center mb-4">
+                <div class="text-pink-500 text-2xl mr-2">★★★★☆</div>
+              </div>
+              <p class="text-gray-700 italic mb-4">
+                "Sunscreen Glowéa teksturnya ringan banget, gak lengket dan gak
+                meninggalkan white cast. Perlindungannya juga mantap untuk
+                aktivitas outdoor."
+              </p>
+              <div class="flex items-center">
+                <img
+                  src="image/caitlin.jpg"
+                  alt="Customer"
+                  class="w-10 h-10 rounded-full mr-3"
+                />
+                <div>
+                  <div class="font-semibold text-pink-600">
+                    Caitlin Halderman
+                  </div>
+                  <div class="text-sm text-gray-500">@caitlinhalderman</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card">
+            <div class="bg-pink-50 p-6 rounded-lg shadow h-full">
+              <div class="flex items-center mb-4">
+                <div class="text-pink-500 text-2xl mr-2">★★★★★</div>
+              </div>
+              <p class="text-gray-700 italic mb-4">
+                "Aduh aku gatau mau ngomong apa selain mau sungkem berat sama
+                ownernya. KOK BISA BIKIN PRODUK SE GOONGG ITUU pokonya i love
+                glowea till i die"
+              </p>
+              <div class="flex items-center">
+                <img
+                  src="image/aqeela.jpg"
+                  alt="Customer"
+                  class="w-10 h-10 rounded-full mr-3"
+                />
+                <div>
+                  <div class="font-semibold text-pink-600">Aqeela Calista</div>
+                  <div class="text-sm text-gray-500">@aqeelacalista</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          id="prevTestimonial"
+          class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white p-2 rounded-full shadow-lg z-10 hover:bg-pink-600 transition ml-2"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button
+          id="nextTestimonial"
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white p-2 rounded-full shadow-lg z-10 hover:bg-pink-600 transition mr-2"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counter Section -->
+  <section id="counter" class="py-16 bg-pink-50 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-pink-700 mb-4">Dipercaya oleh</h3>
+      <div class="text-5xl font-extrabold text-gray-800">
+        <span id="customerCount">10rb</span>+ pelanggan
+      </div>
+      <p class="text-gray-600 mt-4">
+        Glowéa telah digunakan oleh ribuan orang di seluruh Indonesia.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white text-center">
+    <div class="max-w-xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-6 text-gray-800">Contact Us</h3>
+      <p class="text-gray-600 mb-4">
+        Untuk pertanyaan, pemesanan, atau dukungan pelanggan, silakan hubungi
+        kami melalui WhatsApp atau kunjungi toko kami.
+      </p>
+      <a
+        href="https://wa.me/6285711189305"
+        class="inline-block bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition-colors mt-4"
+      >
+        Chat via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Floating Chat Button -->
+  <a
+    href="https://wa.me/6285711189305"
+    target="_blank"
+    class="fixed bottom-6 right-6 bg-pink-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-pink-600 z-50 transition-transform hover:scale-105"
+  >
+    💬 Talk to Us!
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-pink-600 to-pink-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Brand Info -->
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-bold mb-4 flex items-center">
+            <span
+              class="bg-white text-pink-600 rounded-full w-10 h-10 flex items-center justify-center mr-3"
+              >G</span
+            >
+            Glowéa Beauty
+          </h2>
+          <p class="mb-4">
+            Brand kecantikan lokal dengan produk berbahan alami dan halal untuk
+            kulit sehat glowing alami.
+          </p>
+          <div class="flex space-x-4">
+            <i class="fab fa-instagram text-2xl"></i>
+
+            <i class="fab fa-tiktok text-2xl"></i>
+
+            <i class="fab fa-youtube text-2xl"></i>
+
+            <i class="fab fa-facebook text-2xl"></i>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 border-b border-pink-400 pb-2">
+            Contact Us
+          </h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="fas fa-map-marker-alt mr-3 text-pink-200"></i>
+              <span>Jl. Kemang Raya No.12, Jakarta Selatan</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt mr-3 text-pink-200"></i>
+              <span>(021) 1234-5678</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-pink-200"></i>
+              <span>hello@gloweabeauty.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fab fa-whatsapp mr-3 text-pink-200"></i>
+              <span>+62 857-1118-9305</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-pink-400 mt-8 pt-8 text-center">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-sm mb-4 md:mb-0">
+            &copy; 2025 Glowéa Beauty. All rights reserved.
+          </p>
+          <div class="flex space-x-4">Terms of Service</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Testimonial Slider
+    const slider = document.getElementById("testimonialSlider");
+    const prevBtn = document.getElementById("prevTestimonial");
+    const nextBtn = document.getElementById("nextTestimonial");
+    let currentIndex = 0;
+
+    function updateSlider() {
+      const cardWidth = document.querySelector(".testimonial-card").offsetWidth;
+      slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      const totalCards = document.querySelectorAll(".testimonial-card").length;
+      const visibleCards =
+        window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+
+      if (currentIndex < totalCards - visibleCards) {
+        currentIndex++;
+        updateSlider();
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+      }
+    });
+
+    window.addEventListener("resize", updateSlider);
+  </script>
+</html>
